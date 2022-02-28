@@ -1,0 +1,4 @@
+﻿  assingment 3b.cpp
+C:\Users\julie\Downloads\LPC CS 1 Spring 2022\Assignment 4\assingment 3b\assingment 3b\assingment 3b.cpp(21,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\julie\Downloads\LPC CS 1 Spring 2022\Assignment 4\assingment 3b\assingment 3b\assingment 3b.cpp(110,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  assingment 3b.vcxproj -> C:\Users\julie\Downloads\LPC CS 1 Spring 2022\Assignment 4\assingment 3b\x64\Debug\assingment 3b.exe
