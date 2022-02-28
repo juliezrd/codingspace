@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	
+    <title>Future Value Application</title>
+    <script>
+		//while testing the original code:
+		//when type in valid entries: 
+		//V = $40,000, i=8%, T=10, got a FV = $86,356
+		//when type in invalid entries:
+		//V = -$19,999, i=7.5%, T = 15, still got a FV = -$41,218
+		
+		var futureValue;
+		var nextEntry = "yes";
+		var interestPayment;
+		
+		do {
+			do {
+				var investment = prompt("Enter investment amount as xxxxx.xx", 10000);
+				investment = parseFloat(investment);
+				if (isNaN(investment) || investment <=0){
+					alert("Please enter a valid number");
+				}
+				
+			}
+		while (isNaN(investment) || investment <=0);
+		
+		do {
+			var rate = prompt("Enter interest rate as xx.x", 7.5);
+			rate = parseFloat(rate);
+			if (rate <=0 || rate >15) {
+			alert("Interest rate must be larger than 0 and less than 15");
+			}
+		}
+		while (rate <=0 || rate >15);
+		
+		
+		var years = prompt("Enter number of years", 10);
+		years = parseInt(years);
+		if (years <0) {
+			alert("Please enter a valid number");
+		}
+		
+		document.write("Investment amount = " + investment);
+		document.write("Interest rate = " + rate);
+		document.write("Years = " + years + "<br>");
+		
+		
+		futureValue = investment;
+		for (var i = 1; i <= years; i++ ) {
+			interestPayment = futureValue *rate/100;
+			futureValue = futureValue + (futureValue * rate/100);
+			document.write("Year =" + i + "Interest =" + interestPayment + "Value =" + futureValue +"<br>");
+		}
+		futureValue = parseInt(futureValue);	
+		
+		document.write("<br>");
+		nextEntry = prompt("Please enter next group of inputs (yes or no)", "yes");
+		}
+		while (nextEntry == "yes");
+		
+    </script>
+</head>
+<body>
+    <main>
+    	<script>
+			document.write("Investment amount = " + investment);
+			document.write(" Interest rate = " + rate);
+			document.write(" Years = " + years);
+			document.write(" Future Value is " + futureValue + "<br><br>");
+        </script>
+        Thanks for using the Future Value application.
+    </main>
+</body>
+</html>
